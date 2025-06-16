@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+  -webkit-tap-highlight-color: transparent;
+}
+html {
+  position: fixed;
+}
+
+body {
+  overflow: hidden;
+  background: linear-gradient(136.59deg, #da28ff 3.34%, #7fccff 92.15%);
+  height: -webkit-fill-available;
+  width: 100vw;
+}
+
+.get_access-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.aiimage {
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+}
+
+.mask {
+  background-image: url("../assets/img/Group\ 31.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.cross {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.conteiner {
+  width: 100%;
+  padding: 0 24px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.title {
+  color: #fff;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Roboto, sans-serif;
+  font-weight: 860;
+  font-size: 42px;
+  line-height: 46px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 34px;
+  height: 146px;
+}
+.feature {
+  position: relative;
+  max-width: 110px;
+  padding: 12px 8px;
+  display: flex;
+  align-items: end;
+}
+.feature img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.feature p {
+  position: relative;
+  color: #fff;
+  white-space: pre-line;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  vertical-align: text-bottom;
+  z-index: 3;
+}
+.radio-input {
+  display: none;
+}
+.radio-input-box {
+  position: relative;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 1);
+  padding: 9px 24px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.radio-input:checked + label .radio-input-box {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+}
+.bestoffer {
+  position: absolute;
+  right: 24px;
+  top: -10px;
+  border-radius: 100px;
+  min-height: 20px;
+  min-width: 119px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 1);
+}
+.radio-input:checked + label .bestoffer {
+  position: absolute;
+  right: 24px;
+  top: -10px;
+  border-radius: 100px;
+  min-height: 20px;
+  min-width: 119px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(270deg, #00b5ff 0%, #632af7 53.01%, #ff96f4 100%);
+}
+.bestoffer::before {
+  position: absolute;
+  content: " ";
+  background: rgba(255, 255, 255, 1);
+  min-width: 117px;
+  min-height: 18px;
+  border-radius: 100px;
+  right: 1px;
+  top: 1px;
+  z-index: 0;
+}
+.radio-input:checked + label .bestoffer::before {
+  background: linear-gradient(90deg, #bc1fef 0%, #0035ff 100%);
+  position: absolute;
+  content: " ";
+  min-width: 117px;
+  min-height: 18px;
+  border-radius: 100px;
+  right: 1px;
+  top: 1px;
+  z-index: 0;
+}
+.bestoffer p {
+  position: relative;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: rgba(20, 17, 49, 1);
+  z-index: 2;
+}
+.radio-input:checked + label .bestoffer p {
+  color: #fff;
+}
+.radio-input:checked + label .bestoffer .straight {
+  position: absolute;
+  left: calc(-100% - 9px);
+  top: 9px;
+  opacity: 1;
+}
+.radio-input:checked + label .bestoffer .corner {
+  position: absolute;
+  left: calc(100% - 1px);
+  top: 11px;
+  opacity: 1;
+}
+.bestoffer .straight {
+  position: absolute;
+  left: calc(-100% - 10px);
+  top: 9px;
+  opacity: 0;
+}
+.bestoffer .corner {
+  position: absolute;
+  left: calc(100% - 1px);
+  top: 11px;
+  opacity: 0;
+}
+.access-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", Roboto,
+    sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.access-description {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: rgba(255, 255, 255, 1);
+}
+.access-price-box {
+  max-width: 61px;
+  margin-right: 32px;
+}
+.access-price {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: rgba(255, 255, 255, 1);
+}
+.accessoptions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.continue-btn {
+  height: 56px;
+  width: 100%;
+  background: rgba(255, 255, 255, 1);
+  color: rgba(7, 11, 51, 1);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Roboto, sans-serif;
+  font-weight: 590;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  border: none;
+  border-radius: 100px;
+  margin-bottom: 34px;
+}
+.continue-btn:active {
+  opacity: 0.8;
+}
+.footer {
+  width: 281px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 4px;
+  gap: 20px;
+}
+.footer-link {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", Roboto,
+    sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0%;
+  color: rgba(255, 255, 255, 1);
+  word-break: break-all;
+}
+@media (max-width: 375px) {
+  .aiimage {
+    object-position: center -5vh;
+  }
+  .title {
+    margin-bottom: 16px;
+  }
+  .features {
+    margin-bottom: 26px;
+  }
+  .continue-btn {
+    margin-bottom: 28px;
+  }
+  .footer {
+    margin: 0 auto 8px;
+  }
+}
+
+@media (max-width: 414px) {
+  .aiimage {
+    width: 100%;
+  }
+}
