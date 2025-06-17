@@ -1,11 +1,15 @@
+require("../styles/styles.css");
+
+const basePath = process.env.NODE_ENV === "production" ? "AIBY-test" : "";
+
 async function loadLocale(lang) {
   try {
-    const response = await fetch(`./assets/lang/${lang}.json`);
+    const response = await fetch(`${basePath}/assets/lang/${lang}.json`);
     if (!response.ok) throw new Error("Language file not found");
     return await response.json();
   } catch (error) {
     console.error(`Error loading ${lang} locale:`, error);
-    const enResponse = await fetch("locales/en.json");
+    const enResponse = await fetch(`${basePath}/assets/lang/${lang}.json`);
     return await enResponse.json();
   }
 }
