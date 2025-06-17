@@ -82,7 +82,6 @@ const textResizer = async () => {
   const footerLinks = document.getElementsByClassName("footer-link");
   const accessDescription =
     document.getElementsByClassName("access-description")[0];
-  console.log(lang === "de");
   switch (lang) {
     case "de":
       title.classList.add("title__de");
@@ -132,7 +131,6 @@ const textResizer = async () => {
 
       break;
     default:
-      console.log(lang);
       title.classList.remove("title__de");
       for (let link of footerLinks) {
         link.classList.remove("footer-link__es");
