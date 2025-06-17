@@ -75,3 +75,76 @@ continueBtn.addEventListener("click", () => {
   );
   window.location.href = selectedRadio.value;
 });
+
+const textResizer = async () => {
+  const lang = getLanguage();
+  const title = document.getElementsByClassName("title")[0];
+  const footerLinks = document.getElementsByClassName("footer-link");
+  const accessDescription =
+    document.getElementsByClassName("access-description")[0];
+  console.log(lang === "de");
+  switch (lang) {
+    case "de":
+      title.classList.add("title__de");
+      for (let link of footerLinks) {
+        link.classList.remove("footer-link__es");
+        link.classList.remove("footer-link__pt");
+        link.classList.add("footer-link__de");
+        link.classList.remove("footer-link__fr");
+      }
+      accessDescription.classList.remove("access-description__fr");
+      accessDescription.classList.remove("access-description__pt");
+
+      break;
+    case "es":
+      title.classList.remove("title__de");
+      for (let link of footerLinks) {
+        link.classList.add("footer-link__es");
+        link.classList.remove("footer-link__pt");
+        link.classList.remove("footer-link__de");
+        link.classList.remove("footer-link__fr");
+      }
+      accessDescription.classList.remove("access-description__fr");
+      accessDescription.classList.remove("access-description__pt");
+
+      break;
+    case "pt":
+      title.classList.remove("title__de");
+      for (let link of footerLinks) {
+        link.classList.remove("footer-link__es");
+        link.classList.add("footer-link__pt");
+        link.classList.remove("footer-link__de");
+        link.classList.remove("footer-link__fr");
+      }
+      accessDescription.classList.remove("access-description__fr");
+      accessDescription.classList.add("access-description__pt");
+      break;
+    case "fr":
+      title.classList.remove("title__de");
+      for (let link of footerLinks) {
+        link.classList.remove("footer-link__es");
+        link.classList.remove("footer-link__pt");
+        link.classList.remove("footer-link__de");
+        link.classList.add("footer-link__fr");
+      }
+      accessDescription.classList.add("access-description__fr");
+      accessDescription.classList.remove("access-description__pt");
+
+      break;
+    default:
+      console.log(lang);
+      title.classList.remove("title__de");
+      for (let link of footerLinks) {
+        link.classList.remove("footer-link__es");
+        link.classList.remove("footer-link__pt");
+        link.classList.remove("footer-link__de");
+        link.classList.remove("footer-link__fr");
+      }
+      accessDescription.classList.remove("access-description__fr");
+      accessDescription.classList.remove("access-description__pt");
+
+      break;
+  }
+};
+
+document.addEventListener("DOMContentLoaded", textResizer);
