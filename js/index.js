@@ -1,6 +1,6 @@
 require("../styles/styles.css");
 
-const basePath = process.env.NODE_ENV === "production" ? "AIBY-test" : "";
+const basePath = process.env.NODE_ENV === "production" ? "/AIBY-test" : "";
 
 async function loadLocale(lang) {
   try {
