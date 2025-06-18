@@ -40,6 +40,13 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.json$/,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/data/[name][ext]",
+        },
+      },
     ],
   },
   plugins: [

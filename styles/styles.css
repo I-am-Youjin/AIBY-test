@@ -15,7 +15,6 @@ html {
 
 body {
   overflow: hidden;
-  background: linear-gradient(136.59deg, #da28ff 3.34%, #7fccff 92.15%);
   height: -webkit-fill-available;
   width: 100vw;
 }
@@ -23,20 +22,10 @@ body {
 .get_access-section {
   width: 100%;
   overflow: hidden;
-}
-
-.aiimage {
-  width: 100%;
-  position: absolute;
-  z-index: -2;
-}
-/* 
-.mask {
-  background-image: url("../assets/img/Group\ 31.png");
+  background-image: url("../assets/img/AI\ Image\ Copy.png");
   background-size: cover;
   height: 100vh;
-  width: 100%;
-} */
+}
 
 .cross {
   position: absolute;
@@ -306,8 +295,12 @@ body {
   font-size: 9px;
 }
 @media (max-width: 375px) {
-  .aiimage {
-    object-position: center -5vh;
+  .get_access-section {
+    width: 100%;
+    overflow: hidden;
+    background-image: url("../assets/img/AI\ Image\ Copy\ 1.png");
+    background-size: cover;
+    height: 100vh;
   }
   .title {
     margin-bottom: 16px;
